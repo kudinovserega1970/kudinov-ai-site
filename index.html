@@ -140,9 +140,6 @@ p{
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:18px;
-  .projects{
-    margin:70px 0 40px;
-}
 }
 .card{
   background:rgba(255,255,255,.06);
@@ -181,89 +178,666 @@ footer{
     font-size:14px;
     line-height:1.8;
 }
+
+html{scroll-behavior:smooth}
+body{
+  min-width:320px;
+  overflow-x:hidden;
+  background:
+    radial-gradient(circle at 82% 8%,rgba(73,28,150,.72),transparent 27%),
+    radial-gradient(circle at 12% 48%,rgba(52,32,109,.3),transparent 30%),
+    #05060d;
+}
+.page{width:min(1400px,94%);margin:auto}
+header{
+  padding:20px 0;
+  background:rgba(5,6,13,.78);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+nav{gap:24px;align-items:center}
+nav a{font-size:15px;white-space:nowrap}
+section{scroll-margin-top:100px}
+.hero{padding:28px 0 70px}
+.hero-copy{min-width:0}
+.hero-copy p{max-width:700px}
+.hero-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:24px}
+.hero-actions .btn{margin:0}
+.btn{
+  min-height:52px;
+  align-items:center;
+  transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;
+}
+.btn:hover{transform:translateY(-2px);border-color:#9b4dff;box-shadow:0 0 24px rgba(155,77,255,.25)}
+.primary:hover{box-shadow:0 0 38px rgba(155,77,255,.58)}
+.section-block{padding:90px 0 0}
+#kai-os{padding-top:36px}
+.section-heading{max-width:900px;margin-bottom:34px}
+.eyebrow{
+  display:block;
+  color:#b77aff;
+  font-size:13px;
+  font-weight:900;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  margin-bottom:12px;
+}
+.section-heading h2,.result-copy h2{
+  font-size:clamp(34px,5vw,58px);
+  line-height:1.08;
+  margin-bottom:18px;
+}
+.section-heading p{max-width:850px}
+.projects{
+  padding-top:0;
+  margin:0;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+}
+.card{height:100%}
+.card h3{font-size:22px}
+.project-card{display:flex;flex-direction:column;min-height:250px}
+.project-card p{font-size:16px}
+.project-card .card-link{
+  margin-top:auto;
+  padding-top:24px;
+  color:#c892ff;
+  font-weight:800;
+}
+a.project-card{cursor:pointer}
+.feature-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:16px;
+}
+.feature{
+  position:relative;
+  overflow:hidden;
+  min-height:120px;
+  display:flex;
+  align-items:flex-end;
+  font-size:19px;
+  font-weight:900;
+}
+.feature::before{
+  content:"";
+  position:absolute;
+  width:90px;
+  height:90px;
+  right:-25px;
+  top:-25px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(178,112,255,.5),transparent 68%);
+}
+.flow{
+  margin-top:24px;
+  padding:25px;
+  border:1px solid rgba(155,77,255,.45);
+  border-radius:20px;
+  background:linear-gradient(135deg,rgba(155,77,255,.14),rgba(36,110,255,.08));
+  color:#f4ecff;
+  text-align:center;
+  font-size:clamp(17px,2.5vw,25px);
+  font-weight:900;
+  line-height:1.7;
+}
+.timeline{position:relative;display:grid;gap:26px;padding-left:34px}
+.timeline::before{
+  content:"";
+  position:absolute;
+  left:8px;
+  top:12px;
+  bottom:12px;
+  width:2px;
+  background:linear-gradient(#9b4dff,#246eff);
+}
+.timeline-item{position:relative}
+.timeline-item::before{
+  content:"";
+  position:absolute;
+  left:-33px;
+  top:10px;
+  width:14px;
+  height:14px;
+  border:3px solid #bd83ff;
+  border-radius:50%;
+  background:#090915;
+  box-shadow:0 0 20px #9b4dff;
+}
+.timeline-date{color:#c892ff;font-weight:900;margin-bottom:10px}
+.timeline-item h3{font-size:25px;margin-bottom:16px}
+.clean-list{
+  list-style:none;
+  display:grid;
+  gap:10px;
+  color:#c9cde0;
+  font-size:17px;
+  line-height:1.55;
+}
+.clean-list li{position:relative;padding-left:19px}
+.clean-list li::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:.68em;
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:#9b4dff;
+  box-shadow:0 0 10px #9b4dff;
+}
+.case-shell{
+  border:1px solid rgba(155,77,255,.35);
+  border-radius:30px;
+  padding:clamp(24px,6vw,76px);
+  background:linear-gradient(145deg,rgba(19,14,38,.92),rgba(7,8,17,.96));
+  box-shadow:0 30px 100px rgba(0,0,0,.3);
+}
+.case-header{
+  display:block;
+  position:static;
+  padding:0 0 34px;
+  margin-bottom:0;
+  background:none;
+  backdrop-filter:none;
+  border-bottom:1px solid rgba(255,255,255,.12);
+}
+.case-header h2{max-width:920px;font-size:clamp(32px,3vw,40px);line-height:1.08;margin-bottom:14px}
+.case-meta{color:#b77aff;font-size:17px;font-weight:800}
+.case-grid{display:block;max-width:900px;margin:0 auto}
+.chapter{
+  padding:44px 0;
+  border:0;
+  border-bottom:1px solid rgba(255,255,255,.1);
+  border-radius:0;
+  background:none;
+}
+.chapter-number{color:#9b4dff;font-size:13px;font-weight:900;letter-spacing:.13em;text-transform:uppercase}
+.chapter h3{font-size:clamp(27px,3vw,36px);margin:10px 0 18px}
+.chapter p+.clean-list,.chapter .clean-list+p,.chapter p+p{margin-top:15px}
+.quote{
+  margin:24px 0;
+  padding:24px 28px;
+  border-left:3px solid #9b4dff;
+  border-radius:0 16px 16px 0;
+  background:linear-gradient(90deg,rgba(155,77,255,.16),rgba(155,77,255,.04));
+  color:#f2e8ff;
+  font-size:20px;
+  line-height:1.65;
+}
+.case-summary{display:block;max-width:900px;margin:0 auto}
+.case-summary .chapter{background:none}
+.check-list li{padding-left:34px}
+.check-list li::before{
+  top:.22em;
+  width:19px;
+  height:19px;
+  border:1px solid rgba(183,122,255,.8);
+  border-radius:5px;
+  background:rgba(155,77,255,.12);
+  box-shadow:none;
+}
+.check-list li::after{
+  content:"";
+  position:absolute;
+  left:6px;
+  top:.43em;
+  width:7px;
+  height:4px;
+  border-left:2px solid #d9b6ff;
+  border-bottom:2px solid #d9b6ff;
+  transform:rotate(-45deg);
+}
+.roadmap{counter-reset:roadmap;gap:0;margin-top:20px}
+.roadmap li{
+  counter-increment:roadmap;
+  min-height:54px;
+  padding:4px 0 22px 48px;
+}
+.roadmap li::before{
+  content:counter(roadmap);
+  top:0;
+  width:28px;
+  height:28px;
+  display:grid;
+  place-items:center;
+  border:1px solid #9b4dff;
+  border-radius:50%;
+  background:#130c29;
+  color:#d9b6ff;
+  font-size:12px;
+  font-weight:900;
+  box-shadow:0 0 16px rgba(155,77,255,.3);
+}
+.roadmap li:not(:last-child)::after{
+  content:"";
+  position:absolute;
+  left:14px;
+  top:30px;
+  bottom:0;
+  width:1px;
+  background:rgba(155,77,255,.4);
+}
+.case-final{
+  max-width:980px;
+  margin:32px auto 0;
+  padding:clamp(28px,5vw,52px);
+  border:1px solid rgba(155,77,255,.5);
+  border-radius:24px;
+  background:
+    radial-gradient(circle at 90% 10%,rgba(155,77,255,.2),transparent 35%),
+    linear-gradient(145deg,rgba(155,77,255,.12),rgba(255,255,255,.025));
+  box-shadow:0 0 48px rgba(155,77,255,.1);
+}
+.case-final h3{font-size:clamp(30px,4vw,44px);margin:0 0 22px}
+.case-final p+p{margin-top:15px}
+.status-line{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px 24px;
+  margin-top:26px;
+  padding-top:24px;
+  border-top:1px solid rgba(255,255,255,.12);
+  color:#c9cde0;
+}
+.result-panel{
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:44px;
+  padding:clamp(28px,5vw,58px);
+  border:1px solid rgba(155,77,255,.45);
+  border-radius:30px;
+  background:
+    radial-gradient(circle at 8% 10%,rgba(155,77,255,.26),transparent 34%),
+    linear-gradient(135deg,rgba(24,14,49,.92),rgba(7,9,20,.95));
+  box-shadow:0 0 60px rgba(155,77,255,.14);
+}
+.goal{
+  padding:18px 20px;
+  margin:25px 0;
+  border-radius:17px;
+  background:rgba(255,255,255,.06);
+  color:#fff;
+  font-size:21px;
+  line-height:1.45;
+}
+.result-copy .btn{width:auto;margin:0}
+.info-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+.info-grid .card{padding:32px}
+.info-grid h3{font-size:27px;margin-bottom:15px}
+.services{grid-template-columns:repeat(2,minmax(0,1fr))}
+.contacts-card{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:30px;
+  align-items:center;
+  padding:clamp(28px,5vw,52px);
+}
+.contact-lines{display:flex;flex-wrap:wrap;gap:12px 30px;margin-top:16px}
+.contact-lines a{color:#d9b6ff;font-size:18px}
+.contact-actions{display:flex;gap:10px}
+.contact-actions .btn{width:auto;min-width:190px;margin:0}
+footer{margin-top:90px}
+
+@media(max-width:1200px){
+  .hero{grid-template-columns:280px 1fr 300px;gap:28px}
+  .photo{width:280px;height:360px}
+  h1{font-size:60px}
+  .sphere-box{height:340px}
+  .sphere{width:240px;height:240px;font-size:70px}
+  .orbit{width:350px;height:120px}
+  .projects{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:900px){
+  header{align-items:flex-start;gap:16px}
+  .logo{font-size:27px}
+  nav{justify-content:flex-end;flex-wrap:wrap;gap:12px 18px}
+  .hero{grid-template-columns:260px 1fr;padding-top:35px}
+  .photo{width:260px;height:330px}
+  .sphere-box{grid-column:1/-1;height:300px}
+  .feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .result-panel,.info-grid{grid-template-columns:1fr}
+  .case-summary{grid-template-columns:1fr}
+  .contacts-card{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .page{width:min(100% - 28px,1400px)}
+  header{position:relative;display:block;padding:18px 0}
+  nav{justify-content:flex-start;margin-top:16px;gap:10px 16px}
+  nav a{font-size:13px}
+  .hero{grid-template-columns:1fr;gap:28px;padding:20px 0 55px}
+  .hero>div:first-child{display:grid;justify-items:center}
+  .photo{width:100%;max-width:320px;height:auto;aspect-ratio:320/390}
+  .hero-copy{text-align:left}
+  .badge{font-size:13px;line-height:1.5}
+  h1{font-size:clamp(48px,16vw,68px)}
+  .hero-actions{grid-template-columns:1fr}
+  .sphere-box{grid-column:auto;height:270px}
+  .sphere{width:210px;height:210px;font-size:62px}
+  .orbit{width:310px;height:100px}
+  .section-block{padding-top:70px}
+  .projects,.feature-grid,.case-grid{grid-template-columns:1fr}
+  .project-card{min-height:auto}
+  .case-shell{border-radius:22px}
+  .chapter{padding:34px 0}
+  .quote{padding:20px;font-size:18px}
+  .flow{font-size:16px}
+  .contacts-card{padding:25px}
+  .contact-actions{flex-direction:column}
+  .contact-actions .btn{width:100%;min-width:0}
+}
 </style>
 </head>
 
 <body>
 <div class="page">
+  <header>
+    <a class="logo" href="#home">Kudinov <span>AI</span></a>
+    <nav aria-label="Основная навигация">
+      <a href="#home">Главная</a>
+      <a href="#projects">Проекты</a>
+      <a href="#kai-os">KAI OS</a>
+      <a href="#case">История</a>
+      <a href="#about">Обо мне</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+  </header>
 
-<header>
-  <div class="logo">Kudinov <span>AI</span></div>
-  <nav>
-    <a href="#">Главная</a>
-    <a href="#projects">Проекты</a>
-    <a href="#about">Обо мне</a>
-    <a href="#contacts">Контакты</a>
-  </nav>
-</header>
+  <main>
+    <section class="hero" id="home">
+      <div>
+        <img class="photo" src="sergey-kudinov-ai.png" alt="Сергей Кудинов">
+        <a class="btn" href="tel:+79822854519">Позвонить</a>
+      </div>
 
-<section class="hero">
-  <div>
-    <img class="photo" src="sergey-kudinov-ai.png" alt="Сергей Кудинов">
-    <a class="btn" href="tel:+79822854519">Позвонить</a>
-  </div>
+      <div class="hero-copy">
+        <div class="badge">AI-разработчик | Создатель KAI OS | Автоматизация</div>
+        <h1>Сергей <span>Кудинов</span></h1>
+        <h2>Создаю AI-продукты, системы с памятью и автоматизацию для бизнеса</h2>
+        <p>Автор KAI OS — AI-платформы с памятью о бизнесе, интеллектуальным помощником AIRA и Product Builder. Создаю AI-ассистентов, Telegram-ботов и системы автоматизации, которые помогают бизнесу хранить контекст, принимать решения и запускать цифровые продукты.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="https://t.me/seregakudinoff" target="_blank" rel="noopener noreferrer">Написать в Telegram</a>
+          <a class="btn" href="#case">Посмотреть кейсы</a>
+        </div>
+      </div>
 
-  <div>
-    <div class="badge">AI-эксперт | Автоматизация | Боты</div>
-    <h1>Сергей <span>Кудинов</span></h1>
-    <h2>AI-помощники и автоматизация для бизнеса без сложности</h2>
-    <p>
-      Создаю AI-решения, которые экономят время, увеличивают продажи
-      и упрощают работу: Telegram-боты, AI-ассистенты, CRM-связки
-      и автоматизация заявок.
-    </p>
-    <br>
-    <a class="btn primary" href="https://t.me/seregakudinoff" target="_blank">Написать в Telegram</a>
-    <a class="btn" href="#projects">Посмотреть кейсы</a>
-  </div>
+      <div class="sphere-box" aria-hidden="true">
+        <div class="orbit"></div>
+        <div class="sphere">AI</div>
+      </div>
+    </section>
 
-  <div class="sphere-box">
-    <div class="orbit"></div>
-    <div class="sphere">AI</div>
-  </div>
-</section>
+    <section class="section-block" id="kai-os">
+      <div class="section-heading">
+        <span class="eyebrow">Система</span>
+        <h2>KAI OS — AI-помощник с памятью о вашем бизнесе</h2>
+        <p>KAI OS создавался не как очередной чат-бот. Это система, которая хранит контекст, связывает проекты, цели, задачи, решения и память, анализирует состояние бизнеса и помогает принимать следующие решения.</p>
+      </div>
+      <div class="feature-grid">
+        <div class="card feature">Память</div>
+        <div class="card feature">Цели</div>
+        <div class="card feature">Проекты</div>
+        <div class="card feature">Задачи</div>
+        <div class="card feature">Решения</div>
+        <div class="card feature">Карта знаний</div>
+        <div class="card feature">AIRA</div>
+        <div class="card feature">Product Builder</div>
+      </div>
+      <div class="flow">Память → Цель → Проект → Задача → Решение → Опыт</div>
+    </section>
 
-<section id="projects">
-  <h2>Мои проекты</h2>
-  <div class="projects">
-    <div class="card"><h3>AI Упаковщик Экспертов</h3><p>Упаковка, офферы, тарифы и AI-аудит для экспертов.</p></div>
-    <div class="card"><h3>AI Администратор</h3><p>Бот для записи клиентов, ответов, заявок и статусов.</p></div>
-    <div class="card"><h3>KAI OS</h3><p>AI-помощник с памятью о проектах, задачах и клиентах.</p></div>
-    <div class="card"><h3>АЙРА</h3><p>AI-ассистент для экспертов и команд.</p></div>
-  </div>
-</section>
+    <section class="section-block" id="projects">
+      <div class="section-heading">
+        <span class="eyebrow">Направления разработки</span>
+        <h2>Мои проекты</h2>
+      </div>
+      <div class="projects">
+        <a class="card project-card" href="https://kai-platform.ru" target="_blank" rel="noopener noreferrer">
+          <h3>KAI OS</h3>
+          <p>AI-платформа с памятью о бизнесе. Хранит проекты, цели, задачи, решения и накопленный опыт. Помогает видеть состояние системы и следующий шаг.</p>
+          <span class="card-link">Открыть проект</span>
+        </a>
+        <article class="card project-card">
+          <h3>AIRA</h3>
+          <p>Интеллектуальный слой KAI OS. Анализирует состояние системы, находит пробелы, показывает риски и предлагает следующий шаг.</p>
+        </article>
+        <article class="card project-card">
+          <h3>Product Builder</h3>
+          <p>Система создания цифровых продуктов по принципу «Опиши продукт → получи продукт». Формирует Domain Analysis, Product Blueprint, пакет разработки и проект для дальнейшей сборки.</p>
+        </article>
+        <article class="card project-card">
+          <h3>AI Упаковщик Экспертов</h3>
+          <p>Telegram-бот для позиционирования, создания офферов, тарифов, AI-аудита и упаковки экспертов.</p>
+        </article>
+      </div>
+    </section>
 
-<section class="bottom">
-  <div class="card" id="about">
-    <h3>Обо мне</h3>
-    <p>Меня зовут Сергей Кудинов. Я занимаюсь внедрением AI-инструментов, автоматизацией бизнеса, созданием Telegram-ботов, AI-ассистентов и CRM-систем.</p>
-  </div>
+    <section class="section-block" id="case">
+      <article class="case-shell">
+        <header class="case-header">
+          <span class="eyebrow">История создания продукта</span>
+          <h2>КЕЙС: СОЗДАНИЕ KAI OS MVP</h2>
+          <div class="case-meta">Сергей Кудинов • 26.06.2026</div>
+        </header>
 
-  <div class="card">
-    <h3>Услуги</h3>
-    <p>Telegram-боты, AI-ассистенты, CRM-интеграции, автоматизация заявок и консультации.</p>
-  </div>
+        <div class="case-grid">
+          <section class="chapter">
+            <h3>Глава 1. Идея</h3>
+            <p>Проект КАЙ начинался как простая идея:</p>
+            <div class="quote">«Сделать AI-помощника, который не просто отвечает на вопросы, а помнит, анализирует и помогает принимать решения.»</div>
+            <p>Цель была не создать очередного чат-бота.</p>
+            <p>Цель была создать систему, которая умеет:</p>
+            <ul class="clean-list">
+              <li>помнить контекст</li><li>хранить решения</li><li>отслеживать цели</li>
+              <li>показывать риски</li><li>подсказывать следующий шаг</li><li>накапливать опыт</li>
+            </ul>
+            <p>Так появился проект KAI OS — Kudinov AI.</p>
+          </section>
 
-  <div class="card" id="contacts">
-    <h3>Контакты</h3>
-    <p>Telegram: @seregakudinoff<br>Телефон: +7 982 285-45-19</p>
-  </div>
-</section>
-</section>
+          <section class="chapter">
+            <h3>Глава 2. Появление памяти</h3>
+            <p>Первым этапом стало создание памяти.</p>
+            <p>Появились разделы:</p>
+            <ul class="clean-list">
+              <li>Память</li><li>Цели</li><li>Проекты</li><li>Задачи</li><li>Решения</li>
+            </ul>
+            <p>Теперь система могла хранить информацию не в диалоге, а в собственной структуре.</p>
+            <p>КАЙ начал видеть своё состояние.</p>
+          </section>
 
+          <section class="chapter">
+            <h3>Глава 3. Рождение AIRA</h3>
+            <p>Следующим шагом стало создание интеллектуального слоя.</p>
+            <p>Появилась AIRA.</p>
+            <p>Не просто панель статистики.</p>
+            <p>AIRA получила задачу:</p>
+            <ul class="clean-list">
+              <li>анализировать состояние системы</li><li>искать пробелы</li>
+              <li>показывать риски</li><li>предлагать следующий шаг</li>
+            </ul>
+            <p>В этот момент КАЙ впервые начал думать о себе.</p>
+          </section>
+
+          <section class="chapter">
+            <h3>Глава 4. Первый вопрос</h3>
+            <p>AIRA увидела проблему.</p>
+            <p>В памяти были записи.</p>
+            <p>Но целей не было.</p>
+            <p>Она задала первый вопрос:</p>
+            <div class="quote">«Какой результат вы хотите получить из этого опыта?»</div>
+            <p>Это был важный момент.</p>
+            <p>Вместо хранения информации система начала искать направление.</p>
+          </section>
+
+          <section class="chapter">
+            <h3>Глава 5. Первая цель</h3>
+            <p>После ответа появилась первая цель:</p>
+            <div class="quote">«Довести КАЙ до первой рабочей версии»</div>
+            <p>Система впервые получила направление движения.</p>
+            <p>После этого изменились:</p>
+            <ul class="clean-list">
+              <li>Индекс здоровья</li><li>Стратегия</li><li>Прогноз</li><li>Приоритет дня</li>
+            </ul>
+            <p>КАЙ начал понимать, куда движется.</p>
+          </section>
+
+          <section class="chapter">
+            <h3>Глава 6. Первый проект</h3>
+            <p>После появления цели AIRA обнаружила новую проблему.</p>
+            <p>Цель есть.</p>
+            <p>Плана нет.</p>
+            <p>Появилась рекомендация:</p>
+            <div class="quote">Создать первый проект.</div>
+            <p>Был создан первый проект.</p>
+            <p>В этот момент цель превратилась в план реализации.</p>
+          </section>
+
+          <section class="chapter">
+            <h3>Глава 7. Первая задача</h3>
+            <p>Затем система увидела следующий пробел.</p>
+            <p>Есть проект.</p>
+            <p>Но нет действий.</p>
+            <p>Появилась рекомендация:</p>
+            <div class="quote">Создать первую задачу.</div>
+            <p>После создания задачи произошло важное изменение.</p>
+            <p>Герой-секция сайта изменилась автоматически.</p>
+            <p>Появилось сообщение:</p>
+            <div class="quote">«У системы появился план реализации»</div>
+          </section>
+
+          <section class="chapter">
+            <h3>Глава 8. Первое решение</h3>
+            <p>Следующим шагом стало создание блока решений.</p>
+            <p>Появилась возможность фиксировать:</p>
+            <ul class="clean-list">
+              <li>что сделали</li><li>почему сделали</li><li>какой эффект ожидали</li>
+            </ul>
+            <p>Было сохранено первое решение.</p>
+            <p>И именно здесь произошло главное событие дня.</p>
+          </section>
+
+          <section class="chapter">
+            <h3>Глава 9. КАЙ начал накапливать опыт</h3>
+            <p>После появления первого решения Hero автоматически переключился.</p>
+            <p>На экране появилось:</p>
+            <div class="quote">«КАЙ начал накапливать опыт»</div>
+            <p>Это был момент рождения системы.</p>
+            <p>До этого были данные.</p>
+            <p>После этого появился опыт.</p>
+          </section>
+        </div>
+
+        <div class="case-summary">
+          <section class="chapter">
+            <h3>Что создано за день</h3>
+            <p>Работает:</p>
+            <ul class="clean-list check-list">
+              <li>Память</li><li>Цели</li><li>Проекты</li><li>Задачи</li><li>Решения</li>
+              <li>Индекс здоровья</li><li>Стратегия AIRA</li><li>Режимы AIRA</li><li>Прогноз</li>
+              <li>Приоритет №1</li><li>История мышления</li><li>Текущий фокус</li>
+              <li>Автоматические переходы между этапами</li><li>Hero-блоки развития системы</li>
+            </ul>
+          </section>
+          <section class="chapter">
+            <h3>Что получилось</h3>
+            <p>КАЙ больше не является интерфейсом.</p>
+            <p>КАЙ стал системой.</p>
+            <p>Система умеет:</p>
+            <ul class="clean-list">
+              <li>видеть своё состояние</li><li>находить пробелы</li><li>предлагать следующий шаг</li>
+              <li>отслеживать зрелость</li><li>сохранять опыт</li>
+            </ul>
+          </section>
+          <section class="chapter">
+            <h3>Следующая версия KAI v1.1</h3>
+            <p>План развития:</p>
+            <ul class="clean-list roadmap">
+              <li>Анализ решений</li><li>Выявление закономерностей</li><li>Поиск повторяющихся ошибок</li>
+              <li>Индекс прогресса</li><li>Уведомления о рисках</li>
+              <li>AI-наблюдатель за проектами</li><li>Голосовой интерфейс КАЙ</li>
+            </ul>
+          </section>
+        </div>
+
+        <section class="case-final">
+          <h3>Итог дня</h3>
+          <p>26 июня 2026 года был создан первый рабочий MVP KAI OS.</p>
+          <p>Из идеи появился прототип.</p>
+          <p>Из памяти появилась система.</p>
+          <p>Из действий появился опыт.</p>
+          <p>Именно в этот день КАЙ сделал первый шаг к тому, чтобы стать настоящим AI-помощником с памятью о бизнесе.</p>
+          <div class="status-line">
+            <span>Автор проекта: Сергей Кудинов</span>
+            <span>Проект: KAI OS / Kudinov AI</span>
+            <span>Статус: MVP запущен</span>
+          </div>
+        </section>
+      </article>
+    </section>
+
+    <section class="section-block" id="result">
+      <div class="result-panel">
+        <div class="result-copy">
+          <span class="eyebrow">Текущий результат</span>
+          <h2>KAI OS сегодня</h2>
+          <div class="goal">Основная цель:<br><strong>«Опиши продукт → получи продукт»</strong></div>
+          <a class="btn primary" href="https://kai-platform.ru" target="_blank" rel="noopener noreferrer">Открыть KAI OS</a>
+        </div>
+        <div>
+          <h3>Текущие возможности</h3>
+          <ul class="clean-list">
+            <li>память о бизнесе</li><li>связи между сущностями</li>
+            <li>интеллектуальный анализ AIRA</li><li>рекомендации и подтверждения действий</li>
+            <li>Product Builder</li><li>AI Domain Architect</li><li>генерация Product Blueprint</li>
+            <li>экспорт рабочих проектов</li><li>многопользовательская SaaS-платформа</li>
+            <li>собственный домен</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block" id="about">
+      <div class="section-heading">
+        <span class="eyebrow">Автор проекта</span>
+        <h2>Обо мне</h2>
+      </div>
+      <div class="info-grid">
+        <article class="card">
+          <h3>Сергей Кудинов</h3>
+          <p>Меня зовут Сергей Кудинов. Я создаю AI-продукты, автоматизацию и системы с памятью для бизнеса. Главный проект — KAI OS, платформа, которая помогает хранить контекст, связывать решения и превращать идеи в работающие цифровые продукты.</p>
+        </article>
+        <article class="card" id="services">
+          <h3>Услуги</h3>
+          <ul class="clean-list services">
+            <li>разработка AI-ассистентов</li><li>Telegram-боты</li>
+            <li>автоматизация бизнес-процессов</li><li>AI-упаковка экспертов</li>
+            <li>проектирование AI-продуктов</li><li>консультации по внедрению AI</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-block" id="contacts">
+      <div class="card contacts-card">
+        <div>
+          <span class="eyebrow">Связаться</span>
+          <h2>Контакты</h2>
+          <div class="contact-lines">
+            <a href="https://t.me/seregakudinoff" target="_blank" rel="noopener noreferrer">Telegram: @seregakudinoff</a>
+            <a href="tel:+79822854519">Телефон: +7 982 285-45-19</a>
+          </div>
+        </div>
+        <div class="contact-actions">
+          <a class="btn primary" href="https://t.me/seregakudinoff" target="_blank" rel="noopener noreferrer">Написать в Telegram</a>
+          <a class="btn" href="tel:+79822854519">Позвонить</a>
+        </div>
+      </div>
+    </section>
+  </main>
 </div>
 
 <footer>
-    <p>© 2026 Kudinov AI</p>
-
-    <p>
-        AI-ассистенты • Автоматизация • Telegram-боты
-    </p>
-
-    <p>
-        Telegram: @seregakudinoff
-    </p>
+  <p>© 2026 Kudinov AI</p>
+  <p>AI-продукты • Автоматизация • Telegram-боты</p>
+  <p><a href="https://t.me/seregakudinoff" target="_blank" rel="noopener noreferrer">Telegram: @seregakudinoff</a></p>
 </footer>
-
 </body>
 </html>
